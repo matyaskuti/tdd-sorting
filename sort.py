@@ -1,9 +1,7 @@
 def sort(list_):
-    index = 0
-    while len(list_) > index+1:
+    for index in range(len(list_)-1):
         if _is_out_of_order(list_, index):
             _swap_with_next(list_, index)
-        index += 1
     return list_
 
 
