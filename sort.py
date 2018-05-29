@@ -1,2 +1,2 @@
-def sort():
+def sort(_):
     return None
