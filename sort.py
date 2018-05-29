@@ -1,8 +1,8 @@
 def sort(list_):
-    length = len(list_)
-    for index in range(length-1):
-        if _is_out_of_order(list_, index):
-            _swap_with_next(list_, index)
+    for length in range(len(list_), 1, -1):
+        for index in range(length-1):
+            if _is_out_of_order(list_, index):
+                _swap_with_next(list_, index)
     return list_
 
 
