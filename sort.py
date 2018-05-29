@@ -1,2 +1,2 @@
-def sort(_):
-    return []
+def sort(list_):
+    return list_
