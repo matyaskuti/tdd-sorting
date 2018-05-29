@@ -1,4 +1,4 @@
-def sort(list_):
+def bubble_sort(list_):
     for length in range(len(list_), 1, -1):
         for index in range(length-1):
             if _is_out_of_order(list_, index):

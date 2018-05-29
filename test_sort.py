@@ -1,10 +1,10 @@
 import random
 import unittest
 
-from sort import sort
+from sort import bubble_sort
 
 
-class TestSort(unittest.TestCase):
+class TestBubbleSort(unittest.TestCase):
     def test_sort_empty_list(self):
         self._assert_list_sorted([], [])
 
@@ -39,7 +39,7 @@ class TestSort(unittest.TestCase):
 
     def test_sort_large_list(self):
         unsorted_list = random.sample(range(100000), 1000)
-        sorted_list = sort(unsorted_list)
+        sorted_list = self._sort_list(unsorted_list)
 
         self.assertEqual(len(unsorted_list), len(sorted_list))
         self._assert_list_is_sorted(sorted_list)
@@ -49,7 +49,11 @@ class TestSort(unittest.TestCase):
             self.assertTrue(sorted_list[i] <= sorted_list[i+1])
 
     def _assert_list_sorted(self, list1, list2):
-        self.assertListEqual(sort(list1), list2)
+        self.assertListEqual(self._sort_list(list1), list2)
+
+    @staticmethod
+    def _sort_list(list_):
+        return bubble_sort(list_)
 
 
 if __name__ == '__main__':
