@@ -1,5 +1,6 @@
 def sort(list_):
-    if len(list_) > 1:
-        if list_[1] < list_[0]:
-            list_[0], list_[1] = list_[1], list_[0]
+    index = 0
+    if len(list_) > index+1:
+        if list_[index+1] < list_[index]:
+            list_[index], list_[index+1] = list_[index+1], list_[index]
     return list_
