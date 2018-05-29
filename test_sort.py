@@ -1,5 +1,7 @@
 import unittest
 
+from sort import sort
+
 
 class TestSort(unittest.TestCase):
     def test_nothing(self):
