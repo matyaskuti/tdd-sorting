@@ -1,3 +1,4 @@
+import random
 import unittest
 
 from sort import sort
@@ -35,6 +36,17 @@ class TestSort(unittest.TestCase):
         self._assert_list_sorted(
             [42, 42, 23, 23, 1, 1], [1, 1, 23, 23, 42, 42]
         )
+
+    def test_sort_large_list(self):
+        unsorted_list = random.sample(range(100000), 1000)
+        sorted_list = sort(unsorted_list)
+
+        self.assertEqual(len(unsorted_list), len(sorted_list))
+        self._assert_list_is_sorted(sorted_list)
+
+    def _assert_list_is_sorted(self, sorted_list):
+        for i in range(len(sorted_list)-1):
+            self.assertTrue(sorted_list[i] <= sorted_list[i+1])
 
     def _assert_list_sorted(self, list1, list2):
         self.assertListEqual(sort(list1), list2)
