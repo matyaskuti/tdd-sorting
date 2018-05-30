@@ -18,14 +18,7 @@ def sort(list_):
     sorted_ = []
     if len(list_) == 1:
         sorted_.append(list_[0])
-    elif len(list_) == 2:
-        if list_[0] > list_[1]:
-            sorted_.append(list_[1])
-            sorted_.append(list_[0])
-        else:
-            sorted_.append(list_[0])
-            sorted_.append(list_[1])
-    elif len(list_) == 3:
+    else:
         lowest = 0
         middle = list_[0]
         highest = 0
