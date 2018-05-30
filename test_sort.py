@@ -75,6 +75,9 @@ class TestSort(unittest.TestCase):
     def test_sort_three_elements_list_first_is_last(self):
         self._assert_list_sorted([23, 42, 1], [1, 23, 42])
 
+    def test_sort_three_elements_list_reversed(self):
+        self._assert_list_sorted([42, 23, 1], [1, 23, 42])
+
     def _assert_list_sorted(self, list1, list2):
         self.assertListEqual(self._sort_list(list1), list2)
 
