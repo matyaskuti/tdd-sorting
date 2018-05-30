@@ -15,4 +15,11 @@ def _swap_with_next(list_, index):
 
 
 def sort(list_):
-    return list_
+    sorted_ = []
+    if list_[0] > list_[1]:
+        sorted_.append(list_[1])
+        sorted_.append(list_[0])
+    else:
+        sorted_.append(list_[0])
+        sorted_.append(list_[1])
+    return sorted_
