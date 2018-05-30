@@ -22,7 +22,7 @@ def sort(list_):
         lowest = []
         middle = list_[0]
         highest = []
-        for i in list_:
+        for i in list_[1:]:
             if i > middle:
                 highest.append(i)
             else:
