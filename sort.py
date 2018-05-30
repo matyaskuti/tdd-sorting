@@ -16,7 +16,7 @@ def _swap_with_next(list_, index):
 
 def sort(list_):
     sorted_ = []
-    if len(list_) <= 1:
+    if len(list_) == 0:
         return list_
     else:
         lowest = None
