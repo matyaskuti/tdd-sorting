@@ -14,7 +14,7 @@ def _swap_with_next(list_, index):
     list_[index], list_[index+1] = list_[index+1], list_[index]
 
 
-def sort(list_):
+def quick_sort(list_):
     if list_ == []:
         return list_
 
@@ -25,4 +25,4 @@ def sort(list_):
         else:
             lowest.append(i)
 
-    return [*sort(lowest), middle, *sort(highest)]
+    return [*quick_sort(lowest), middle, *quick_sort(highest)]

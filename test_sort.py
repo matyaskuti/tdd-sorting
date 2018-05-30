@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from sort import bubble_sort, sort
+from sort import bubble_sort, quick_sort
 
 
 class TestBubbleSort(unittest.TestCase):
@@ -59,10 +59,10 @@ class TestBubbleSort(unittest.TestCase):
         return bubble_sort(list_)
 
 
-class TestSort(TestBubbleSort):
+class TestQuickSort(TestBubbleSort):
     @staticmethod
     def _sort_list(list_):
-        return sort(list_)
+        return quick_sort(list_)
 
 
 if __name__ == '__main__':
