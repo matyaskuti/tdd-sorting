@@ -19,16 +19,18 @@ def sort(list_):
     if len(list_) <= 1:
         return list_
     else:
-        lowest = 0
+        lowest = None
         middle = list_[0]
-        highest = 0
+        highest = None
         for i in list_:
             if i > middle:
                 highest = i
             if i < middle:
                 lowest = i
 
-        sorted_.append(lowest)
+        if lowest is not None:
+            sorted_.append(lowest)
         sorted_.append(middle)
-        sorted_.append(highest)
+        if highest is not None:
+            sorted_.append(highest)
     return sorted_
