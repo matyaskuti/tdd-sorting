@@ -26,12 +26,16 @@ def sort(list_):
             sorted_.append(list_[0])
             sorted_.append(list_[1])
     elif len(list_) == 3:
+        lowest = 0
+        middle = list_[0]
+        highest = 0
         if list_[1] > list_[2]:
-            sorted_.append(list_[2])
-            sorted_.append(list_[0])
-            sorted_.append(list_[1])
+            highest = list_[1]
+            lowest = list_[2]
         else:
-            sorted_.append(list_[1])
-            sorted_.append(list_[0])
-            sorted_.append(list_[2])
+            highest = list_[2]
+            lowest = list_[1]
+        sorted_.append(lowest)
+        sorted_.append(middle)
+        sorted_.append(highest)
     return sorted_
