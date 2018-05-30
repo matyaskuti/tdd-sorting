@@ -31,6 +31,11 @@ class TestSort(unittest.TestCase):
     def test_sort_three_elements_list_reversed(self):
         self._assert_list_sorted([42, 23, 1], [1, 23, 42])
 
+    def test_sort_list_reversed_with_duplications(self):
+        self._assert_list_sorted(
+            [42, 42, 23, 23, 1, 1], [1, 1, 23, 23, 42, 42]
+        )
+
     def _assert_list_sorted(self, list1, list2):
         self.assertListEqual(sort(list1), list2)
 
