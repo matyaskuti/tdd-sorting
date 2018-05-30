@@ -15,19 +15,14 @@ def _swap_with_next(list_, index):
 
 
 def sort(list_):
-    sorted_ = []
-    if len(list_) == 0:
+    if list_ == []:
         return list_
-    else:
-        lowest = []
-        middle = list_[0]
-        highest = []
-        for i in list_[1:]:
-            if i > middle:
-                highest.append(i)
-            else:
-                lowest.append(i)
-        sorted_ += sort(lowest)
-        sorted_.append(middle)
-        sorted_ += sort(highest)
-    return sorted_
+
+    lowest, middle, highest = [], list_[0], []
+    for i in list_[1:]:
+        if i > middle:
+            highest.append(i)
+        else:
+            lowest.append(i)
+
+    return [*sort(lowest), middle, *sort(highest)]
