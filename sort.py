@@ -12,3 +12,7 @@ def _is_out_of_order(list_, index):
 
 def _swap_with_next(list_, index):
     list_[index], list_[index+1] = list_[index+1], list_[index]
+
+
+def sort(list_):
+    return list_

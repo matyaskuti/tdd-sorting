@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from sort import bubble_sort
+from sort import bubble_sort, sort
 
 
 class TestBubbleSort(unittest.TestCase):
@@ -54,6 +54,24 @@ class TestBubbleSort(unittest.TestCase):
     @staticmethod
     def _sort_list(list_):
         return bubble_sort(list_)
+
+
+class TestSort(unittest.TestCase):
+    def test_sort_empty_list(self):
+        self._assert_list_sorted([], [])
+
+    def test_sort_list_with_one_element(self):
+        self._assert_list_sorted([42], [42])
+
+    def test_sort_list_with_two_elements_in_order(self):
+        self._assert_list_sorted([23, 42], [23, 42])
+
+    def _assert_list_sorted(self, list1, list2):
+        self.assertListEqual(self._sort_list(list1), list2)
+
+    @staticmethod
+    def _sort_list(list_):
+        return sort(list_)
 
 
 if __name__ == '__main__':
