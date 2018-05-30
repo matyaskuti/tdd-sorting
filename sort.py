@@ -16,8 +16,8 @@ def _swap_with_next(list_, index):
 
 def sort(list_):
     sorted_ = []
-    if len(list_) <= 1:
-        return list_
+    if len(list_) == 1:
+        sorted_.append(list_[0])
     elif len(list_) == 2:
         if list_[0] > list_[1]:
             sorted_.append(list_[1])
