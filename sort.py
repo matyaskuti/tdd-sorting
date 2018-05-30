@@ -25,7 +25,7 @@ def sort(list_):
         for i in list_:
             if i > middle:
                 highest.append(i)
-            if i < middle:
+            else:
                 lowest.append(i)
         sorted_ += sort(lowest)
         sorted_.append(middle)
