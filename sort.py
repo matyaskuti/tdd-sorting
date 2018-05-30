@@ -29,12 +29,12 @@ def sort(list_):
         lowest = 0
         middle = list_[0]
         highest = 0
-        if list_[1] > list_[2]:
-            highest = list_[1]
-            lowest = list_[2]
-        else:
-            highest = list_[2]
-            lowest = list_[1]
+        for i in list_:
+            if i > middle:
+                highest = i
+            if i < middle:
+                lowest = i
+
         sorted_.append(lowest)
         sorted_.append(middle)
         sorted_.append(highest)
