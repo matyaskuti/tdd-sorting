@@ -81,6 +81,9 @@ class TestSort(unittest.TestCase):
     def test_sort_three_elements_list_last_two_out_of_order(self):
         self._assert_list_sorted([1, 42, 23], [1, 23, 42])
 
+    def test_sort_three_elements_list_with_duplicate(self):
+        self._assert_list_sorted([42, 42, 1], [1, 42, 42])
+
     def _assert_list_sorted(self, list1, list2):
         self.assertListEqual(self._sort_list(list1), list2)
 
