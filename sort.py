@@ -17,7 +17,11 @@ def _swap_with_next(list_, index):
 def quick_sort(list_):
     if list_ == []:
         return list_
+    lowest, middle, highest = _partition(list_)
+    return [*quick_sort(lowest), middle, *quick_sort(highest)]
 
+
+def _partition(list_):
     lowest, middle, highest = [], list_[0], []
     for i in list_[1:]:
         if i > middle:
@@ -25,4 +29,4 @@ def quick_sort(list_):
         else:
             lowest.append(i)
 
-    return [*quick_sort(lowest), middle, *quick_sort(highest)]
+    return lowest, middle, highest
